@@ -12,16 +12,6 @@
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-        <script src="https://use.typekit.net/avc0vhq.js"></script>
-        <script src="https://use.fontawesome.com/b6011138ee.js"></script>
-        <script>try {
-                Typekit.load({async: true});
-            } catch (e) {
-            }
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/parallax.min.js" type="text/javascript"></script>
-
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<?php bloginfo('description'); ?>">
@@ -34,14 +24,6 @@
         <!-- End Google Tag Manager -->
 
         <?php wp_head(); ?>
-        <script>
-// conditionizr.com
-// configure environment tests
-            conditionizr.config({
-                assets: '<?php echo get_template_directory_uri(); ?>',
-                tests: {}
-            });
-        </script>
 
     </head>
     <body <?php body_class(); ?>>

@@ -8,7 +8,7 @@
             <div class="row">
 
                 <div class="col-xs-4 col-sm-2">
-                    <img src="<?php echo z_taxonomy_image_url($current_issue_category_id); ?>" alt="Current Issue" class="img-responsive"/>
+                    <img src="<?php echo get_site_url() . z_taxonomy_image_url($current_issue_category_id); ?>" alt="Current Issue" class="img-responsive"/>
                 </div>
                 <div class="col-xs-8 col-sm-10">
                     <h2 class="header-stripes"><?php echo $categoryObject->name ?> Issue <span></span></h2>
