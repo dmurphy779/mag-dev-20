@@ -1,0 +1,29 @@
+img.mast-logo{
+  max-width:400px;
+}
+
+
+ul#menu-top-navigation{
+ li a{
+
+ }
+}
+.navbar-collapse ul li.menu-item-has-children:hover{
+  .dropdown-menu{
+    display:block;
+  }
+}
+
+form.search-form input.form-control{
+  background-color: transparent;
+  border:none;
+  border-radius:0;
+  border-bottom: 2px solid #777;
+}
+
+.navbar-toggler{
+  position:absolute;
+  top:0;
+  right:0;
+
+}
