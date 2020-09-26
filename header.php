@@ -36,7 +36,7 @@
 <header>
     <section class="main-nav">
         <!-- nav -->
-        <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+        <nav class="navbar navbar-expand-md navbar-dark" role="navigation">
             <div class="container position-relative">
                 <a class="navbar-brand" href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Favicon.svg" width="30"
@@ -85,22 +85,22 @@
                 </button>
             </div>
         </nav>
-    </section>
-    <div class="my-5">
-        <div class="container">
-            <div class="brand">
-                <a href="<?php echo home_url(); ?>">
-                    <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-                    <img class="mast-logo"
-                         src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
-                         alt="Newman University">
-                </a>
+        <?php  if (! is_front_page()){ ?>
+            <div class="my-5">
+                <div class="container">
+                    <div class="brand">
+                        <a href="<?php echo home_url(); ?>">
+                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                            <img class="mast-logo"
+                                 src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
+                                 alt="Newman University">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
             </div>
-            <!-- /logo -->
-        </div>
-    </div>
-    <!--<div class="search-form"><?php //get_search_form(); ?></div>-->
+        <?php } ?>
 
-
+    </section>
 </header>
 <!-- /header -->

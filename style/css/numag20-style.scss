@@ -1,29 +1,130 @@
-img.mast-logo{
-  max-width:400px;
+html, body, main, article, {
+  height: 100%;
 }
 
-
-ul#menu-top-navigation{
- li a{
-
- }
+.clearboth {
+  clear: both;
 }
-.navbar-collapse ul li.menu-item-has-children:hover{
-  .dropdown-menu{
-    display:block;
+
+header {
+  height: auto;
+}
+
+img.mast-logo {
+  max-width: 400px;
+}
+
+//******NAVIGATION*********//
+
+nav.navbar {
+  background-color: $primary;
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  height: 80px;
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    background-color: $primary !important;
+  }
+
+  .navbar-toggler {
+    padding: .3rem .6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+
+    .navbar-toggler-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .navbar-collapse ul li.menu-item-has-children {
+    .dropdown-menu {
+      border-radius: 0;
+      padding: 0;
+      display: block;
+      transition: opacity .3s ease-out;
+      opacity: 0;
+      height: 0;
+      margin-top: -2px;
+      overflow: hidden;
+      background-color: $dark;
+      font-size: 1em;
+
+      a {
+        color: rgba(255, 255, 255, .5);
+
+        &:hover, &:active {
+          background-color: $primary;
+        }
+      }
+    }
+
+    &:hover {
+      .dropdown-menu {
+        opacity: 1;
+        height: auto;
+      }
+    }
   }
 }
 
-form.search-form input.form-control{
-  background-color: transparent;
-  border:none;
-  border-radius:0;
-  border-bottom: 2px solid #777;
+form.search-form {
+  input.form-control {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, .5);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, .5);
+    }
+  }
+
+  button.btn {
+    i {
+      color: rgba(255, 255, 255, .5);
+      transition: .3s;
+    }
+
+    &:hover i {
+      color: rgba(255, 255, 255, .8);
+      transition: .3s;
+    }
+  }
 }
 
-.navbar-toggler{
-  position:absolute;
-  top:0;
-  right:0;
+body.home {
+  nav.navbar {
+    background-color: rgba(26, 42, 74, .6);
+    position: relative;
+    z-index: 999;
+  }
 
+  main.content-main {
+    margin-top: -80px;
+    z-index: 0;
+  }
+}
+
+
+//*****HOME COVER ARTICLE*****//
+
+.home-cover-article {
+  min-height: 100%;
+}
+
+
+//******FOOTER*******//
+.seal img {
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-social-icons {
+  font-size: 1.3em;
 }

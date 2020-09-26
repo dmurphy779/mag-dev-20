@@ -1,5 +1,11 @@
-$font-family-sans-serif: 'Raleway', sans-serif;
-$font-family-serif: 'EB Garamond', serif;
+$font-family-sans-serif: 'Abel', sans-serif !default;
+$font-family-serif: 'EB Garamond', serif !default;
 $font-family-base: $font-family-serif !default;
 
 $font-size-base:              1.3rem !default; // Assumes the browser default, typically `16px`
+
+$blue:    #263e70 !default;
+$blue-dark: #1a2a4a !default;
+$red:     #b52c34 !default;
+$primary:       $blue-dark !default;
+$secondary:     $red !default;

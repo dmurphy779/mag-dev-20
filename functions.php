@@ -68,7 +68,7 @@ function html5blank_styles() {
     wp_register_style('fontawesome', get_template_directory_uri() . '/fonts/fontawesome-5.14.0/css/all.css', array(), '1.0', 'all');
     wp_enqueue_style('fontawesome'); // Enqueue it!
 
-    wp_register_style('googlefonts', 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,800;1,400&family=Raleway:ital,wght@0,300;1,200&display=swap', array(), '1.0', 'all');
+    wp_register_style('googlefonts', 'https://fonts.googleapis.com/css2?family=Abel&family=Raleway:ital,wght@0,300;1,200&display=swap', array(), '1.0', 'all');
     wp_enqueue_style('googlefonts'); // Enqueue it!
 
 	wp_enqueue_style('cookie-consent-style', '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css');
