@@ -2,7 +2,7 @@
 <footer class="bg-dark py-5 text-light">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-4">
                 <div class="company-info">
                     <a href="https://newmanu.edu" title="Newman University" class="footer-logo">
                         <img class="img-fluid pb-3"
@@ -24,7 +24,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Magazine Staff</li>
+                    <li class="list-group-item">Newman Leadership</li>
+                    <li class="list-group-item">Annual Reports</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
                 <div class="mission">
                     <h3 class="text-center">Our Mission</h3>
                     <p>Newman University is a Catholic university named for St. John Henry Newman

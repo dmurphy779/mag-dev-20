@@ -62,7 +62,7 @@ function my_scripts_modifier( $tag, $handle, $src ) {
 function html5blank_styles() {
 
     //be sure to replace time() with version to allow caching once done working in dev
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), time(), 'all');
+    wp_register_style('html5blank', get_template_directory_uri() . '/style/css/style.css', array(), time(), 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 
     wp_register_style('fontawesome', get_template_directory_uri() . '/fonts/fontawesome-5.14.0/css/all.css', array(), '1.0', 'all');
@@ -191,7 +191,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '') {
 // Custom View Article link to Post
 function html5_blank_view_article($more) {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <br /> <a class="view-article btn btn-primary" href="' . get_permalink($post->ID) . '">' . __('Visit Article', 'numag-20') . '</a>';
 }
 
 // Remove Admin bar

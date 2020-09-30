@@ -11,5 +11,4 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 
-@import url(style/css/style.css);
-
+/*  Style is pulled from style/css/style.css as enqueued by the functions.php file  */
