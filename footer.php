@@ -26,9 +26,9 @@
             </div>
             <div class="col-md-4">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Magazine Staff</li>
-                    <li class="list-group-item">Newman Leadership</li>
-                    <li class="list-group-item">Annual Reports</li>
+                    <li class="list-group-item"><a href="<?php echo get_page_link(9004)?>">Magazine Staff</a></li>
+                    <li class="list-group-item"><a href="<?php echo get_page_link(9015)?>">Newman Leadership</a></li>
+                    <li class="list-group-item"><a href="<?php echo get_category_link(1721); ?>">Annual Reports</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

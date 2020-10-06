@@ -62,17 +62,18 @@
 
                     ?>
 
-                    <form role="search" method="get" class="search-form" id="searchform" action="<?php echo home_url( '/' ); ?>">
+                    <form role="search" method="get" class="search-form" id="searchform"
+                          action="<?php echo home_url('/'); ?>">
 
                         <div class="input-group">
                             <input type="search" id="s" class="form-control search-field"
-                                   placeholder="<?php echo esc_attr_x( 'Search…', 'placeholder' ) ?>"
+                                   placeholder="<?php echo esc_attr_x('Search…', 'placeholder') ?>"
                                    value="<?php echo get_search_query() ?>" name="s"
-                                   title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                                   title="<?php echo esc_attr_x('Search for:', 'label') ?>"/>
 
-                            <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                            <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"
+                                                                              aria-label="Submit Search"></i></button>
                         </div>
-
                     </form>
 
                 </div>
@@ -85,8 +86,8 @@
                 </button>
             </div>
         </nav>
-        <?php  if (! is_front_page()){ ?>
-            <div class="my-5">
+        <?php if (is_single()) : ?>
+            <div class="py-5">
                 <div class="container">
                     <div class="brand">
                         <a href="<?php echo home_url(); ?>">
@@ -99,7 +100,87 @@
                     <!-- /logo -->
                 </div>
             </div>
-        <?php } ?>
+        <?php elseif (is_front_page()) : ''; ?>
+        <?php elseif (is_search()) : ''; ?>
+            <div class="bg-light-2 py-5">
+                <div class="container">
+                    <div class="brand">
+                        <a href="<?php echo home_url(); ?>">
+                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                            <img class="mast-logo"
+                                 src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
+                                 alt="Newman University">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+            </div>
+            <div class="mb-5 text-white">
+                <div class="container bg-primary-2 py-2 page-title">
+                    <h1><?php echo sprintf(__('%s Search Results for ', 'html5blank'), $wp_query->found_posts);
+                        echo get_search_query(); ?></h1>
+                </div>
+            </div>
+        <?php elseif (is_404()) : ''; ?>
+            <div class="bg-light-2 py-5">
+                <div class="container">
+                    <div class="brand">
+                        <a href="<?php echo home_url(); ?>">
+                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                            <img class="mast-logo"
+                                 src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
+                                 alt="Newman University">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+            </div>
+            <div class="mb-5 text-white">
+                <div class="container bg-primary-2 py-2 page-title">
+                    <h1><?php _e('Page not found', 'numag-20'); ?></h1>
+                </div>
+            </div>
+        <?php elseif (is_category()) : ?>
+            <div class="bg-light-2 py-5">
+                <div class="container">
+                    <div class="brand">
+                        <a href="<?php echo home_url(); ?>">
+                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                            <img class="mast-logo"
+                                 src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
+                                 alt="Newman University">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+            </div>
+            <div class="mb-5 text-white">
+                <div class="container bg-primary-2 py-2 page-title">
+                    <h1><?php single_cat_title(); ?></h1>
+                </div>
+            </div>
+
+        <?php else : ?>
+            <div class="bg-light-2 py-5">
+                <div class="container">
+                    <div class="brand">
+                        <a href="<?php echo home_url(); ?>">
+                            <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+                            <img class="mast-logo"
+                                 src="<?php echo get_template_directory_uri(); ?>/img/Newman-Mag-Logo-Blue.svg"
+                                 alt="Newman University">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+            </div>
+            <div class="mb-5 text-white">
+                <div class="container bg-primary-2 py-2 page-title">
+                    <h1><?php echo the_title(); ?></h1>
+                </div>
+            </div>
+
+        <?php endif; ?>
 
     </section>
 </header>

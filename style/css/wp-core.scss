@@ -60,8 +60,7 @@ a img.aligncenter {
 }
 .wp-caption .wp-caption-text,
 .gallery-caption {
-  font-size:11px;
-  line-height:17px;
+  font-size:.7em;
   margin:0;
   padding:0 4px 5px;
 }
@@ -123,5 +122,17 @@ a img.aligncenter {
   h2,
   h3 {
     page-break-after:avoid;
+  }
+}
+
+figcaption{
+  font-size:.8em;
+  font-style:italic;
+}
+
+.wp-block-image{
+  img{
+    max-width:100%;
+    height:auto;
   }
 }

@@ -1,7 +1,17 @@
-(function ($, root, undefined) {
-
-	
-})(jQuery, this);
+jQuery(document).ready(function ($) {
+    $('.btn').click(function () {
+        $button_cat = $(this).attr('data-category');
+        $('.home-category-grid-top, .home-category-grid-bottom').fadeOut('fast');
+        $('.home-category-grid-bottom-'+$button_cat).fadeIn('slow');
+        $('.category-grid-menu').fadeIn('slow');
+        $("body,html").animate(
+            {
+                scrollTop: $(".home-category-grid").offset().top
+            },
+            800 //speed
+        );
+    });
+})
 
 // GDPR - Cookie Consent
 // https://cookieconsent

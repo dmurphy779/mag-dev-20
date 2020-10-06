@@ -7853,8 +7853,7 @@ a img.aligncenter {
 
 .wp-caption .wp-caption-text,
 .gallery-caption {
-  font-size: 11px;
-  line-height: 17px;
+  font-size: .7em;
   margin: 0;
   padding: 0 4px 5px; }
 
@@ -7907,8 +7906,17 @@ a img.aligncenter {
   h2,
   h3 {
     page-break-after: avoid; } }
+figcaption {
+  font-size: .8em;
+  font-style: italic; }
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto; }
+
 html, body, .full-screen-banner {
-  height: 100%; }
+  height: 100%;
+  background-color: #e9ecef; }
 
 .clearboth {
   clear: both; }
@@ -7922,6 +7930,18 @@ header {
 
 img.mast-logo {
   max-width: 400px; }
+
+.blockquote {
+  margin: 1em 0;
+  padding: .5em 1em;
+  border-left: 6px solid #b52c34;
+  background-color: #fff; }
+
+.bg-light-2, .mag-archive-issue, .pagination a:hover {
+  background-color: #ced4da; }
+
+.bg-primary-2 {
+  background-color: #4e5a73; }
 
 /* https://getbootstrap.com/docs/4.1/layout/grid/#no-gutters */
 .no-gutters {
@@ -8002,8 +8022,11 @@ body.home .home-cover-story {
 .home-cover-article {
   min-height: 100%; }
 
-.home-feature-image {
-  width: 100%; }
+.slider_image_container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; }
 
 .carousel-control-prev, .carousel-control-next {
   width: 25px; }
@@ -8019,34 +8042,41 @@ body.home .home-cover-story {
   max-width: 300px;
   display: block; }
 
-.grid-1-item .img-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px; }
-  .grid-1-item .img-frame > a img {
-    width: 100%; }
-  .grid-1-item .img-frame h3 {
-    font-size: 1.3em;
-    position: absolute;
-    margin-bottom: 0;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 50px 15px 20px 15px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); }
-    .grid-1-item .img-frame h3 a {
-      color: #fff; }
+.home-category-grid-bottom-news,
+.home-category-grid-bottom-giving,
+.home-category-grid-bottom-athletics,
+.home-category-grid-bottom-facstaff,
+.home-category-grid-bottom-alumni,
+.category-grid-menu {
+  display: none; }
+
+.home-category-grid-bottom .section-header {
+  margin-top: 1em;
+  margin-bottom: -.5em; }
 
 .grid-1-item {
   padding-top: 1em; }
+  .grid-1-item .img-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; }
+    .grid-1-item .img-frame:hover {
+      box-shadow: 0 0 0px 2px #9b9b9b; }
+    .grid-1-item .img-frame > a img {
+      width: 100%; }
+    .grid-1-item .img-frame h3 {
+      font-size: 1.3em;
+      position: absolute;
+      margin-bottom: 0;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      padding: 50px 15px 20px 15px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); }
+      .grid-1-item .img-frame h3 a {
+        color: #fff; }
   .grid-1-item .grid-1-item-more {
     margin-top: 5px; }
-    .grid-1-item .grid-1-item-more a {
-      background-color: #ddd;
-      padding: 6px 14px;
-      font-size: .7em;
-      font-family: "Abel", sans-serif;
-      border-radius: 3px; }
 
 /*-----SINGLE POST-----*/
 article.format-standard .article-header {
@@ -8063,6 +8093,60 @@ article.format-standard .article-header {
       object-fit: cover;
       object-position: center; }
 
+article .article-header figure {
+  position: relative;
+  overflow: hidden; }
+  article .article-header figure img {
+    width: 100%; }
+  article .article-header figure h1 {
+    color: #fff;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 100px 30px 20px 30px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%); }
+
+.page-title {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+/*------ISSUES ARCHIVE PAGE------*/
+.mag-archive-issue {
+  padding: 4px 6px 6px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-style: italic;
+  height: 100%; }
+  .mag-archive-issue img {
+    transition: .3s;
+    opacity: .8; }
+    .mag-archive-issue img:hover {
+      transition: .3s;
+      opacity: 1; }
+  .mag-archive-issue .mag-archive-issue-title {
+    font-size: .7em;
+    margin-bottom: 2px; }
+
+/*------CATEGORY PAGE------*/
+.loop-item {
+  border-radius: 12px; }
+  .loop-item img {
+    border-radius: 8px; }
+
+.pagination a, .pagination .page-numbers {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 2px 0 0;
+  border: 1px solid #aaa;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: .3s; }
+.pagination a:hover {
+  transition: .3s; }
+
 .seal img {
   max-width: 200px;
   margin: 0 auto;
@@ -8076,5 +8160,7 @@ article.format-standard .article-header {
 
 footer .list-group-item {
   background-color: transparent; }
+  footer .list-group-item a {
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

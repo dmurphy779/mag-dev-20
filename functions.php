@@ -31,6 +31,8 @@ if (function_exists('add_theme_support')) {
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+
+    add_theme_support( 'responsive-embeds' );
 }
 
 /* ------------------------------------*\
@@ -41,7 +43,7 @@ if (function_exists('add_theme_support')) {
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts() {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.1'); // Custom scripts
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), time()); // Custom scripts
         wp_enqueue_script('html5blankscripts');
         wp_register_script('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", array('jquery')); // Custom scripts
         wp_enqueue_script('bootstrap');
@@ -402,6 +404,27 @@ function getIssueCategoryID($issuesID) {
     }
 }
 
+function get_post_issue_link($post_id){
+    $issue_parent_cat_id = 1780;
+    $issue_child_cats=get_categories(
+        array( 'child_of' => $issue_parent_cat_id )
+    );
+
+    foreach ($issue_child_cats as $issue_child_cat){
+        //echo '<p>' . $issue_child_cat->cat_ID . '</p>';
+        $issue_child_cat_ids[] = $issue_child_cat->cat_ID;
+    }
+    $post_category_ids = wp_get_post_categories($post_id);
+    $issue_id_intersect = array_intersect($post_category_ids, $issue_child_cat_ids);
+    $issue_id_intersect_reset_keys = array_values($issue_id_intersect);
+    $issue_category = get_category($issue_id_intersect_reset_keys[0]);
+    $issue_name = $issue_category->name;
+    $issue_url = get_category_link($issue_category);
+    return '<a href="' . $issue_url . '">' . $issue_name . '</a>';
+    //return var_dump($array);
+    //return ($issue_id[10]);
+}
+
 function getSinglePostSectionName($sectionParentCat) {
     $args = array(
         'hide_empty' => 0,
@@ -469,3 +492,10 @@ function register_navwalker(){
     require_once get_template_directory() . '/include/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+function in_page_var_shortcode($atts){
+    if ($atts = 'home-url'){
+       return home_url();
+    }
+}
+add_shortcode( 'ipvs', 'in_page_var_shortcode' );

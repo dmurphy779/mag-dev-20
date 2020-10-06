@@ -1,13 +1,14 @@
 html, body, .full-screen-banner {
   height: 100%;
+  background-color: $gray-200;
 }
 
 .clearboth {
   clear: both;
 }
 
-.wp-block-button__link{
-  padding:4px 24px;
+.wp-block-button__link {
+  padding: 4px 24px;
   border-radius: 3px;
 }
 
@@ -17,6 +18,23 @@ header {
 
 img.mast-logo {
   max-width: 400px;
+}
+
+.blockquote {
+  margin: 1em 0;
+  padding: .5em 1em;
+  border-left: 6px solid $secondary;
+  background-color: $white;
+}
+
+
+.bg-light-2 {
+  background-color: $gray-400;
+}
+
+.bg-primary-2{
+  //#4b5873
+  background-color: #4e5a73;
 }
 
 /* https://getbootstrap.com/docs/4.1/layout/grid/#no-gutters */
@@ -31,9 +49,9 @@ img.mast-logo {
   }
 }
 
-.section-header{
-  font-size:1.2em;
-  font-style:italic
+.section-header {
+  font-size: 1.2em;
+  font-style: italic
 }
 
 //******NAVIGATION*********//
@@ -100,7 +118,8 @@ form.search-form {
     border-radius: 0;
     border-bottom: 2px solid rgba(255, 255, 255, .5);
     color: rgba(255, 255, 255, .5);
-    font-size:1em;
+    font-size: 1em;
+
     &::placeholder {
       color: rgba(255, 255, 255, .5);
     }
@@ -120,8 +139,6 @@ form.search-form {
 }
 
 
-
-
 //*****HOME COVER ARTICLE*****//
 
 body.home {
@@ -133,7 +150,7 @@ body.home {
 
   .home-cover-story {
     margin-top: -80px;
-    height:100%;
+    height: 100%;
     z-index: 0;
   }
 }
@@ -142,88 +159,176 @@ body.home {
   min-height: 100%;
 }
 
-.home-feature-image{
-  width:100%;
+.slider_image_container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
-.carousel-control-prev, .carousel-control-next{
-  width:25px;
+.carousel-control-prev, .carousel-control-next {
+  width: 25px;
 }
 
-.carousel-control-next{
-  right:-50px;
-}
-.carousel-control-prev{
-  left:-50px;
+.carousel-control-next {
+  right: -50px;
 }
 
-.home-more-issue-stories{
-  img{
+.carousel-control-prev {
+  left: -50px;
+}
+
+.home-more-issue-stories {
+  img {
     margin: 0 auto;
-    max-width:300px;
-    display:block;
+    max-width: 300px;
+    display: block;
   }
 }
 
-.grid-1-item{
-  .img-frame{
-    position:relative;
-    overflow:hidden;
+.home-category-grid-bottom-news,
+.home-category-grid-bottom-giving,
+.home-category-grid-bottom-athletics,
+.home-category-grid-bottom-facstaff,
+.home-category-grid-bottom-alumni,
+.category-grid-menu {
+  display: none;
+}
+
+.home-category-grid-bottom .section-header {
+  margin-top: 1em;
+  margin-bottom: -.5em;
+}
+
+.grid-1-item {
+  padding-top: 1em;
+
+  .img-frame {
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
-    > a img{
-      width:100%;
+    &:hover{
+      box-shadow: 0 0 0px 2px #9b9b9b;
     }
-    h3{
-      font-size:1.3em;
+    > a img {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 1.3em;
       //font-family:$font-family-sans-serif;
       position: absolute;
-      margin-bottom:0;
-      bottom:0px;
-      left:0px;
+      margin-bottom: 0;
+      bottom: 0px;
+      left: 0px;
       width: 100%;
       padding: 50px 15px 20px 15px;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
-      a{
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+
+      a {
         color: #fff;
       }
     }
   }
 
-}
-
-.grid-1-item{
-  padding-top:1em;
-  .grid-1-item-more{
-    margin-top:5px;
-    a{
-      background-color:#ddd;
-      padding: 6px 14px;
-      //color:#fff;
-      font-size:.7em;
-      //text-transform:uppercase;
-      font-family:$font-family-sans-serif;
-      border-radius: 3px;
-    }
+  .grid-1-item-more {
+    margin-top: 5px;
   }
 }
 
 /*-----SINGLE POST-----*/
-article.format-standard{
-  .article-header{
-    width:100%;
+article.format-standard {
+  .article-header {
+    width: 100%;
     border-top: 2px dotted #aaa;
     border-bottom: 2px dotted #aaa;
     margin-bottom: 2em;
     padding: 1em 0;
-    figure{
-      width:100%;
-      img{
-        width:100%;
-        height:600px;
+
+    figure {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 600px;
         object-fit: cover;
         object-position: center;
       }
     }
+  }
+}
+
+article .article-header figure {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    //font-family:$font-family-sans-serif;
+    color: #fff;
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 100px 30px 20px 30px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .8) 100%);
+  }
+}
+
+.page-title {
+  $page-title-radius : 10px;
+  border-bottom-left-radius: $page-title-radius;
+  border-bottom-right-radius: $page-title-radius;
+}
+
+/*------ISSUES ARCHIVE PAGE------*/
+
+.mag-archive-issue{
+  @extend .bg-light-2;
+  padding:4px 6px 6px 6px;
+  border-radius:4px;
+  font-weight:bold;
+  font-style:italic;
+  height:100%;
+  img{
+    transition:.3s;
+    opacity:.8;
+    &:hover{
+      transition:.3s;
+      opacity:1;
+    }
+  }
+  .mag-archive-issue-title{
+    font-size:.7em;
+    margin-bottom:2px;
+  }
+}
+
+/*------CATEGORY PAGE------*/
+.loop-item{
+  border-radius:12px;
+  img{
+    border-radius:8px;
+  }
+}
+.pagination{
+  a, .page-numbers{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px 0 0;
+    border: 1px solid #aaa;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: .3s;
+  }
+  a:hover{
+    @extend .bg-light-2;
+    transition: .3s;
   }
 }
 
@@ -239,10 +344,13 @@ article.format-standard{
   font-size: 1.3em;
 }
 
-.carousel-indicators{
+.carousel-indicators {
   bottom: -57px;
 }
 
-footer .list-group-item{
-  background-color:transparent;
+footer .list-group-item {
+  background-color: transparent;
+  a {
+    color: #fff;
+  }
 }

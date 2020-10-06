@@ -31,7 +31,7 @@
         $sidebarposts = get_posts($args);
         ?>
 
-        <div class="bg-light py-5">
+        <div class="bg-light-2 py-5">
             <div class="container">
                 <h2 class="section-header">Feature Articles</h2>
                 <div class="row">
