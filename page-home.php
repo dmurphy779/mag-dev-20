@@ -2,22 +2,6 @@
 
 <?php $current_issue_category_id = get_option('default_category'); //set using the default category in the writing options setting ?>
 <?php $categoryObject = get_category($current_issue_category_id); ?>
-
-<!--<section class="bg-dark">
-        <div class="wrapper">
-            <div class="row">
-
-                <div class="col-xs-4 col-sm-2">
-                    <img src="<?php //echo get_site_url() . z_taxonomy_image_url($current_issue_category_id); ?>" alt="Current Issue" class="img-responsive"/>
-                </div>
-                <div class="col-xs-8 col-sm-10">
-                    <h2 class="header-stripes"><?php //echo $categoryObject->name ?> Issue <span></span></h2>
-                    <p>You are viewing the <?php //echo $categoryObject->name ?> issue of the Newman University Magazine.</p>
-                    <p>Looking for previous issues? <a href="/issues">View the archive</a>
-                    </p></div>
-            </div>
-        </div>
-    </section>-->
 <section class="home-cover-story">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
         <!-- article -->
@@ -49,7 +33,7 @@
     <?php endif; ?>
 </section>
 
-<section class="bg-primary pt-5" style="padding-bottom:4rem;">
+<section class="bg-primary bg-black-linen pt-5" style="padding-bottom:4rem;">
     <div class="container">
         <h2 class="section-header text-white">Feature Stories</h2>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -120,7 +104,7 @@
     </div>
 
 </section>
-<section class="bg-light-2 py-5 home-category-grid">
+<section class="bg-light-2 bg-cloth py-5 home-category-grid">
     <div class="container">
 
             <div class="category-grid-menu">
@@ -432,7 +416,7 @@
         </div>
     </div>
 </section>
-<section class="bg-primary py-5 home-more-issue-stories">
+<section class="bg-primary bg-black-linen py-5 home-more-issue-stories">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

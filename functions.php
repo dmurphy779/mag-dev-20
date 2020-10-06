@@ -193,7 +193,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '') {
 // Custom View Article link to Post
 function html5_blank_view_article($more) {
     global $post;
-    return '... <br /> <a class="view-article btn btn-primary" href="' . get_permalink($post->ID) . '">' . __('Visit Article', 'numag-20') . '</a>';
+    return '... <br /> <a class="view-article btn btn-primary mt-2" href="' . get_permalink($post->ID) . '">' . __('Visit Article', 'numag-20') . '</a>';
 }
 
 // Remove Admin bar

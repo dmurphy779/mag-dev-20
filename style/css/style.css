@@ -7940,6 +7940,14 @@ img.mast-logo {
 .bg-light-2, .mag-archive-issue, .pagination a:hover {
   background-color: #ced4da; }
 
+.bg-black-linen {
+  background-image: url(../../img/seamless-bg/seamless-black-linen.png);
+  background-repeat: repeat; }
+
+.bg-cloth {
+  background-image: url(../../img/seamless-bg/seamless-cloth.png);
+  background-repeat: repeat; }
+
 .bg-primary-2 {
   background-color: #4e5a73; }
 
@@ -8132,6 +8140,8 @@ article .article-header figure {
 /*------CATEGORY PAGE------*/
 .loop-item {
   border-radius: 12px; }
+  .loop-item h2 {
+    font-size: 1.4em; }
   .loop-item img {
     border-radius: 8px; }
 

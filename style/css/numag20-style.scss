@@ -32,6 +32,16 @@ img.mast-logo {
   background-color: $gray-400;
 }
 
+.bg-black-linen{
+  background-image:url(../../img/seamless-bg/seamless-black-linen.png);
+  background-repeat:repeat;
+}
+
+.bg-cloth{
+  background-image:url(../../img/seamless-bg/seamless-cloth.png);
+  background-repeat:repeat;
+}
+
 .bg-primary-2{
   //#4b5873
   background-color: #4e5a73;
@@ -311,6 +321,9 @@ article .article-header figure {
 /*------CATEGORY PAGE------*/
 .loop-item{
   border-radius:12px;
+  h2{
+    font-size:1.4em;
+  }
   img{
     border-radius:8px;
   }

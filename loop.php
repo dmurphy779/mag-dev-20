@@ -9,7 +9,7 @@ if (have_posts()): while (have_posts()) : the_post();
 
         <!-- article -->
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="bg-light-2 loop-item mb-3 p-2">
+            <div class="bg-white bg-black-linen loop-item mb-3 p-2">
                 <div class="loop-item-header">
                     <div class="row">
                         <div class="col-3">
@@ -35,9 +35,9 @@ if (have_posts()): while (have_posts()) : the_post();
 
                             <!-- post details -->
                             <span class="article-issue"><?php echo get_post_issue_link(get_the_ID()); ?></span><span class="article-section"> | Section: <a href="<?php echo $sectionURL; ?>"><?php echo $sectionName ?></a></span>
-
+                            <hr>
                             <!-- /post details -->
-                            <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php  ?>
+                            <div class="mb-2"><?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php  ?></div>
                         </div>
                     </div><!--row-->
                 </div>
