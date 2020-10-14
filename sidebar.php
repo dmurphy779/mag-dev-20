@@ -1,5 +1,5 @@
 <!-- sidebar -->
-<aside class="sidebar" role="complementary">
+<aside class="sidebar d-print-none" role="complementary">
 
 
     <?php

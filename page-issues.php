@@ -46,6 +46,32 @@
                 }
                 ?>
             </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 pt-4">
+                    <h2>More Issues from the Archives</h2>
+                    <p>The Newman University <a href="https://newmanu.edu/campus-life/campus-services/dugan-library/university-archives">Department of Archives</a> has scanned, cataloged and curated several past magazines and newspapers freely available to you.</p>
+                    <ul>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Alumni_Magazines">Newman University Magazine: 2013 - Present</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Alumni_Magazines">Challenge Magazine: 1960s - 2013</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_The_Vantage">The Vantage: 1960s - present</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_Pacemaker">Pacemaker: 1960s</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_College_News">The College News: 1950s - 1960s</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_Sacred_Heart_Echoes">Sacred Heart Echoes: 1946 - 1953</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_The_College_Crier">The College Crier: 1941</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_Rorschach_Blot">Rorschach Blot: 1968</a></li>
+                        <li><a href="https://newmanu.libguides.com/archive_master/Newspaper_The_Afterburner">The Afterburner: 1967-1969</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-primary text-white p-4">
+                        <h2>Pay it Forward</h2>
+                        <p>Consider making a small donation to Newman University to show your support of these archival efforts.</p>
+                        <p><a class="btn btn-light" href="https://give.newmanu.edu">Give to Newman</a></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 </article>

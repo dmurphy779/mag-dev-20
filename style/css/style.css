@@ -8173,4 +8173,15 @@ footer .list-group-item {
   footer .list-group-item a {
     color: #fff; }
 
+@media print {
+  img {
+    max-width: 400px !important;
+    max-height: 400px !important; }
+
+  article .article-header figure h1 {
+    color: #000 !important;
+    position: relative !important;
+    padding: inherit !important;
+    background: transparent !important; } }
+
 /*# sourceMappingURL=style.css.map */

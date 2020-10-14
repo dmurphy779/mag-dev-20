@@ -33,7 +33,7 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<header>
+<header class="d-print-none">
     <section class="main-nav">
         <!-- nav -->
         <nav class="navbar navbar-expand-md navbar-dark" role="navigation">
